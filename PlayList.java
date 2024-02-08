@@ -99,6 +99,7 @@ class PlayList {
             return false;
         } else if (i >= this.getSize()) {
             tracks[this.getSize()] = track;
+            size++;
             return true;
         } else {
             for (int j = this.getSize(); j > i; j--){
