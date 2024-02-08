@@ -119,7 +119,7 @@ class PlayList {
         if (this.getSize() <= 0 || i < 0 || i >= this.getSize()) {
             throw new IllegalArgumentException("-1");   
         } else {
-            for (int j = i; j <= this.getSize(); j++){
+            for (int j = i; j < this.getSize(); j++){
                 tracks[j] = tracks[j+1];
             }
             tracks[getSize() - 1] = null;
