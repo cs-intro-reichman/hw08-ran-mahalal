@@ -38,6 +38,7 @@ class PlayList {
         if (this.getSize() == this.getMaxSize()) {
             return false;
         } else {
+            // #feedback - note that you can access size directly within this class.
             tracks[getSize()] = track;
             size++;
         }
@@ -62,6 +63,7 @@ class PlayList {
         if (this.getSize() == 0) {
             return;
         } else {
+            // #feedback - should be size -1 (not maxSize).
             tracks[getMaxSize() - 1] = null;
             size--;
         }
@@ -117,7 +119,7 @@ class PlayList {
      *  does nothing and returns -1. */
     public void remove(int i) {
         if (this.getSize() <= 0 || i < 0 || i >= this.getSize()) {
-            throw new IllegalArgumentException("-1");   
+            throw new IllegalArgumentException("-1");
         } else {
             for (int j = i; j < this.getSize(); j++){
                 tracks[j] = tracks[j+1];
